@@ -1,0 +1,16 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.colunas{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1;
+}
+.colunaA{
+    background-color: black;
+}
+.img-user{
+    width: 100px;
+    height: 100px;
+}
