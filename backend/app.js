@@ -11,10 +11,10 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise')
 const app = express();
-const PORT = 3001
+const PORT = 3001;
 const pool = mysql.createPool({
     host:'localhost',
-    port:'3001',
+    port:'3306',
     user:'root',
     password:'senai',
     database:'eco_move'
@@ -55,8 +55,9 @@ app.post('/comentarios', (req, res) => {
 });
 
 //atividades
-app.get('/atividades', (req, res) => {
-    res.send("Ok")
+app.get('/atividades', async  (req, res) => {
+    let [atividades] = await pool.query('select * from tb_atividade;');
+    res.json(atividades)
 });
 app.post('/atividades', (req, res) => {
     res.send("Ok")

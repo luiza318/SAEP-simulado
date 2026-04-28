@@ -9,12 +9,14 @@
 <body>
     <div class="colunas">
         <div class="colunaA">
-            <img src="/anexos/logo_ecomove/EcoMove.png" alt="">
-            <h1>EcoMove</h1>
+            <div class="logo">
+                <img class="logo" src="/anexos/logo_ecomove/icone-test.jpg" alt="">
+            </div>
+            <h1 class="titulo" >EcoMove</h1>
             <div class="informacoes">
                 <h1>5</h1>
-                <h2>Qtd.Atividades</h2>
                 <h1>1.45</h1>
+                <h2>Qtd.Atividades</h2>
                 <h2>Qtd.CO2 (kg)</h2>
             </div>
             <div class="linha"></div>
@@ -41,25 +43,25 @@
         </div>
 
         <div class="colunaB">
-            <head>
-                <button type="button" placeholder="Login"></button>
-            </head>
-            <section>
+            <header>
+                <button type="button">Login</button>
+            </header>
+            <section class="ativ">
                 <h1>Bicicleta</h1>
                 <h1>Caminhada</h1>
                 <h1>Transporte Público</h1>
             </section>
             <div class="atividade">
                 <h1>nome-atividade</h1>
-                <section>
+                <section class="s-user">
                     <img class="img-user" src="/anexos/imagens_perfil/usuario01.jpg" alt="">
                     <h2>nome-usuario</h2>
                     <div class="info">
-                        <h1>2 km</h1>
+                        <h3>2 km</h3>
+                        <h3>20 mim</h3>
+                        <h3>0.30 kg</h3>
                         <h2>Distância</h2>
-                        <h1>20 mim</h1>
                         <h2>Duração</h2>
-                        <h1>0.30 kg</h1>
                         <h2>CO2 evitado</h2>
                     </div>
                     <div class="interativo">
@@ -86,5 +88,7 @@
         <button type="button" placeholder="Login"></button>
         <button type="button" placeholder="Cancelar"></button>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
