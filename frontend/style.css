@@ -85,7 +85,7 @@ header button{
     color: #000;
     cursor: pointer;
 }
-.ativ{
+.filtros{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;

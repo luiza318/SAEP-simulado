@@ -10,7 +10,7 @@
     <div class="colunas">
         <div class="colunaA">
             <div class="logo">
-                <img class="logo" src="/anexos/logo_ecomove/icone-test.jpg" alt="">
+                <img class="logo" src="/anexos/logo_ecomove/EcoMove.svg" alt="">
             </div>
             <h1 class="titulo" >EcoMove</h1>
             <div class="informacoes">
@@ -42,15 +42,36 @@
             </footer>
         </div>
 
-        <div class="colunaB">
+        <div class="colunaB" id="colunaB">
             <header>
                 <button type="button">Login</button>
             </header>
-            <section class="ativ">
+            <section class="filtros" id="filtros">
                 <h1>Bicicleta</h1>
                 <h1>Caminhada</h1>
                 <h1>Transporte Público</h1>
             </section>
+            <div id="form-atividades">
+        <form id="fa">
+           <label for="tipo">Tipo de Atividade:</label> 
+           <select name="tipo" id="tipo">
+               <option value="bicicleta">Bicicleta</option>
+               <option value="caminhada">Caminhada</option>
+               <option value="transporte_publico">Transporte Público</option>
+           </select>
+
+            <label for="distancia">Distância em metros:</label>
+            <input type="number" id="distancia" name="distancia" >
+
+            <label for="duracao">Duração em minutos</label>
+            <input type="number" id="duracao" name="duracao">
+
+            <label for="co2kg">CO² Evitado</label>
+            <input type="text" id="co2kg" name="co2kg">
+
+            <button type="submit" onClick="">Salvar</button>
+        </form>
+    </div>
             <div class="atividade">
                 <h1>nome-atividade</h1>
                 <section class="s-user">

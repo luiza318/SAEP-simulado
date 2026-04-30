@@ -60,10 +60,22 @@ app.get('/atividades', async  (req, res) => {
     res.json(atividades)
 });
 app.post('/atividades', (req, res) => {
-    res.send("Ok")
+    try{
+        const atv = req.body
+
+        const sql = 'insert into tb_atividade (usuario_id, tipo, distancia_metros, duracao_minutos, co2_kg) VALUES (?, ?, ?, ?, ?)'
+
+        const valores = [atv.tipo, atv.distancia_metros, atv.duracao_minutos, atv.co2_kg];
+
+        await pool.query(sql, valores);
+        res.send('ok');
+        }catch(e){
+            console.log("ERROR REAL:", e.message);
+            res.status(500).send(e.message);
+        }
 });
 
-//servidor é executado
+//servidor é executa                     do
 
 app.listen(PORT, () => {
     console.log("Servidor rodando")
